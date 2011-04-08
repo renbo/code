@@ -1,18 +1,18 @@
- #include <stdio.h>
- int sub(int a,int b);
-
- int main(int argc, const char *argv[])
- {
-     int a = 5;
-     int b = 3;
-     int c = 0;
-
-     c = sub(a,b);
-     printf("c = %d\n",c);
-     return 0;
- }
- 
-int sub(int a ,int b)     
+#include <stdio.h>
+int mul(int a,int b);
+int main(int argc, const char *argv[])
 {
-    return (a-b);
+    int a = 8;
+    int b = 2;
+    int c = 0;
+
+    c = mul(a,b);
+    printf("c=%d\n",c);
+
+    return 0;
+
+}
+int mul(int a,int b)
+{
+    return(a*b);
 }
