@@ -12,21 +12,22 @@ int init_array(int p[],int n)
 {
     int i =0;
     i = 0;
-    while(i<n)
+    do
     {
         p[i] = i+1;
         i++;
-    }
+    }while(i<n);
     return 0;
 }
 int printf_array(int p[],int n)
 {
     int i = 0;
     i = 0;
-    while(i<n)
+    do
     { 
         printf("%5d",p[i]);
         i++;
     }
+    while(i<n);
     printf("\n");
 }
