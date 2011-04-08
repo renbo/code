@@ -1,17 +1,33 @@
 #include <stdio.h>
-int div(int a,int b);
+
 int main(int argc, const char *argv[])
 {
-    int a = 6;
-    int b = 3;
-    int c = 0;
+    int array[100];
 
-    c = div(a,b);
-    printf("c =%d\n",c);
-    
+    init_array(array,100);
+    printf_array(array,100);
     return 0;
 }
-int div(int a,int b)
+int init_array(int p[],int n) 
 {
-    return (a/b);
+    int i =0;
+    for (i = 0; i < n; i++) 
+    {
+        p[i] = i+1;
+    }
+    return 0;
+
 }
+int printf_array(int p[],int n)
+{
+    int i = 0;
+    for (i = 0; i < n; i++)
+
+    {
+        printf("%5d",p[i]);
+
+    }
+    printf("\n");
+}
+
+
