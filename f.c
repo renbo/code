@@ -1,33 +1,26 @@
 #include <stdio.h>
 
+void hanoi(char a,char b,char c,int n);
 int main(int argc, const char *argv[])
 {
-    int array[100];
-    init_array(array,100);
-    printf_array(array,100);
+    int n=0;
+    printf("Please input the number:\n");
+    scanf("%d",&n);
 
+    hanoi('A','B','C',n);
     return 0;
 }
-int init_array(int p[],int n)
-{
-    int i =0;
-    i = 0;
-    do
+void hanoi(char a,char b,char c,int n)
+{   
+    if (n==1)
     {
-        p[i] = i+1;
-        i++;
-    }while(i<n);
-    return 0;
-}
-int printf_array(int p[],int n)
-{
-    int i = 0;
-    i = 0;
-    do
-    { 
-        printf("%5d",p[i]);
-        i++;
+        printf("%c---->%c\n",a,c);
+        return ;
     }
-    while(i<n);
-    printf("\n");
+    hanoi(a,c,b,n-1);
+    printf("%c---->%c\n",a,c);
+    hanoi(b,a,c,n-1);
+
 }
+    
+
