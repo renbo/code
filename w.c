@@ -1,4 +1,24 @@
 #include <stdio.h>
+#define  N  100
+#include <string.h>
+int main(int argc, const char *argv[])
+{
+    char str[N]="This is a C world";
+    char *p = str;
+    char *s = str;
+    while(*s !='\0')
+    {
+      while(*s==' ')s++;
+        if (p!=s) 
+        {
+           *p = *s;
+        }
+     p++;
+     s++;
+    }
+   *p = '\0';                                                                              printf("len = %d\t%s\n",strlen(str),str);
+}   
+/*  #include <stdio.h>
 
 int main(int argc, const char *argv[])
 {
@@ -20,4 +40,4 @@ int main(int argc, const char *argv[])
     printf("\n");
 
     return 0;
-}
+}  */
