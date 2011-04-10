@@ -18,6 +18,7 @@ int main(int argc, const char *argv[])
     }
     *p = '\0';
     printf("len = %d\t%s\n",strlen(str),str);
+
 /*    char str[20]="This is a C world!";
     char *p=str;
     for(p =str; *p!= '\0'; p++)
