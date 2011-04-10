@@ -1,14 +1,28 @@
 #include <stdio.h>
 #define N 10
+#include <string.h>
+void str_test(void);
 void init_array(int *p,int n);
 void j_game(int *p,int n);
 int main(int argc, const char *argv[])
 {
-    int array[N];
+//    int array[N];
 
-    init_array(array,N);
-    j_game(array,N);
+//    init_array(array,N);
+//    j_game(array,N);
+      str_test();
      return 0;
+}
+void str_test(void)
+{
+    char str[100]="This is only a Game !";
+    char *p = str;
+    p = strtok(p," ");
+    while(p !=NULL)
+    {
+        printf("%s\n",p);
+        p = strtok(NULL," ");
+    }
 }
 void init_array(int *p,int n)
 {
